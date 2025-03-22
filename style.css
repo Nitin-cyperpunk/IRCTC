@@ -1,12 +1,7 @@
-<div class="main min-h-screen w-full bg-cover bg-center bg-fixed">
-<img src="./bg.jpg" alt="" class="w-full h-screen">
-<div class="flex flex-row">
-<div class="w-1/2 p-8 justify-start text-2xl">
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus dolore aliquid esse quas quae rerum tempora? Debitis veritatis reprehenderit iure laudantium maxime temporibus? Dolorem voluptates nihil, ex quaerat atque velit odio corrupti molestias voluptate quod dicta maxime itaque eligendi ad.
-</div>
-<div class="w-1/2 p-8 justify-end z-60 ">
-    <h1 class="font-bold uppercase text-[#213D77] text-5xl mt-20 ml-16">Indian Railways</h1>
-    <h2 class="capitalize text-2xl text-[#213D77] mt-2 ml-28">Safety | Security | punctuality</h2>
-</div>
-</div>
-</div>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+@layer base {
+  .font-quicksand {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
