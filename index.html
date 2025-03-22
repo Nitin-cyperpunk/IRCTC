@@ -22,7 +22,11 @@
             </div>
 
             <div class="flex flex-col">
-
+                <button id="menu-toggle" class="md:hidden p-2">
+                    <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z" />
+                    </svg>
+                </button>
                 <ul class=" flex justify-between items-center w-full uppercase ml-6">
                     <button class="bg-[#213D77] border px-4 py-2 ml-6">
                         <h1 class="text-white uppercase">Login</h1>
@@ -81,101 +85,79 @@
             </div>
         </nav>
     </header>
-    <main class="">
-        <div class="main min-h-screen w-full bg-cover bg-fixed bg-top-[20%]"
+   <main class="">
+    <div class="main min-h-screen w-full bg-cover bg-fixed bg-top-[20%]"
         style="background-image: url('https://www.irctc.co.in/nget/home_page_banner1.e6749c3d9698d1ac7608.jpg');">
 
-        <div class="flex flex-row">
-            <div class="w-[60%] p-16 justify-start ">
-            <div class="gap-2  mt-20 w-full flex flex-row">
-                <button class="bg-[#213D77] border px-4 py-2 w-[46%] flex flex-row gap-8" >
-                    <img src="./image/pnr.png" alt="" class="">
-                    <h1 class="text-white uppercase">PNR STATUS</h1>
-                </button>
-                <button class="bg-[#213D77] border px-4 py-2 w-[47%] flex flex-row gap-8" >
-                    <img src="./image/chart.png" alt="" class="">
-                    <h1 class="text-white uppercase">CHART/VACCANY</h1>
-                </button>
-            </div>
-           <div class="form bg-white shadow-2xl rounded-xl w-[95%] h-[90%] p-8">
-            
-                <h1 class="text-3xl font-semibold text-center mb-6 text-[#213D77]">BOOK TICKET</h1>
-            
-                <div class="grid grid-cols-2 gap-7 ">
-                    <div>
-                        <input type="text" id="from" placeholder="From" class="text-lg text-[#213D77] placeholder-[#213D77] mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77] w-full">
+        <div class="flex flex-col md:flex-row"> <div class="w-full md:w-[60%] p-8 md:p-16 justify-start"> <div class="gap-2 mt-8 md:mt-20 w-full flex flex-col md:flex-row"> <button class="bg-[#213D77] border px-4 py-2 w-full md:w-[46%] flex flex-row gap-4 md:gap-8 mb-4 md:mb-0">
+                        <img src="./image/pnr.png" alt="" class="">
+                        <h1 class="text-white uppercase">PNR STATUS</h1>
+                    </button>
+                    <button class="bg-[#213D77] border px-4 py-2 w-full md:w-[47%] flex flex-row gap-4 md:gap-8">
+                        <img src="./image/chart.png" alt="" class="">
+                        <h1 class="text-white uppercase">CHART/VACCANY</h1>
+                    </button>
+                </div>
+                <div class="form bg-white shadow-2xl rounded-xl w-full md:w-[95%] h-auto md:h-[90%] p-8 mt-8 md:mt-0"> <h1 class="text-3xl font-semibold text-center mb-6 text-[#213D77]">BOOK TICKET</h1>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-7"> <div>
+                            <input type="text" id="from" placeholder="From" class="text-lg text-[#213D77] placeholder-[#213D77] mt-2 md:mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77] w-full">
+                        </div>
+                        <div>
+                            <label for="date" class="block text-sm font-medium text-[#213D77] ml-0 md:ml-4">DD/MM/YYYY *</label>
+                            <input type="date" id="date" value="2025-03-22" class="text-lg text-[#213D77] placeholder-[#213D77] w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
+                        </div>
+                        <div>
+                            <input type="text" id="to" placeholder="Any Destination" class="text-lg text-[#213D77] placeholder-[#213D77] mt-2 md:mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
+                        </div>
+                        <div>
+                            <select id="class" class="text-lg text-[#213D77] placeholder-[#213D77] mt-2 md:mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77] w-full">
+                                <option>All Classes</option>
+                                <option>First Class</option>
+                                <option>Second Class</option>
+                                <option>Sleeper</option>
+                            </select>
+                        </div>
                     </div>
-                    <div>
-                        <label for="date" class="block text-sm font-medium text-[#213D77] ml-4">DD/MM/YYYY *</label>
-                        <input type="date" id="date" value="2025-03-22" class="text-lg text-[#213D77] placeholder-[#213D77] w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
-                    </div>
-                    <div>
-                        
-                        <input type="text" id="to" placeholder="Any Destination" class="text-lg text-[#213D77] placeholder-[#213D77]  mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
-                    </div>
-                    <div>
-                        
-                        <select id="class" class="text-lg  text-[#213D77] placeholder-[#213D77]  mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
-                            <option>All Classes</option>
-                            <option>First Class</option>
-                            <option>Second Class</option>
-                            <option>Sleeper</option>
+                    <div class="mt-4">
+                        <select id="general" class="text-lg text-[#213D77] placeholder-[#213D77] mt-2 md:mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77] w-full">
+                            <option>General</option>
+                            <option>Ladies</option>
+                            <option>Tatkal</option>
                         </select>
                     </div>
+                    <div class="mt-4">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                            <span class="ml-2 text-sm text-gray-700">Person With Disability Concession</span>
+                        </label>
+                        <label class="inline-flex items-center ml-4">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                            <span class="ml-2 text-sm text-gray-700">Flexible With Date</span>
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                            <span class="ml-2 text-sm text-gray-700">Train with Available Berth</span>
+                        </label>
+                        <label class="inline-flex items-center ml-4">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                            <span class="ml-2 text-sm text-gray-700">Railway Pass Concession</span>
+                        </label>
+                    </div>
+                    <div class="mt-6 flex flex-col sm:flex-row justify-between"> <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4 sm:mb-0">Search</button>
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">Easy Booking on AskDISHA</button>
+                    </div>
                 </div>
-            
-                <div class="mt-4">
-                    
-                    <select id="general" class="text-lg  text-[#213D77] placeholder-[#213D77]  mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
-                        <option>General</option>
-                        <option>Ladies</option>
-                        <option>Tatkal</option>
-                    </select>
-                </div>
-            
-                <div class="mt-4">
-                    <label class="inline-flex items-center">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
-                        <span class="ml-2 text-sm text-gray-700">Person With Disability Concession</span>
-                    </label>
-                    <label class="inline-flex items-center ml-4">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
-                        <span class="ml-2 text-sm text-gray-700">Flexible With Date</span>
-                    </label>
-                </div>
-            
-                <div class="mt-2">
-                    <label class="inline-flex items-center">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
-                        <span class="ml-2 text-sm text-gray-700">Train with Available Berth</span>
-                    </label>
-                    <label class="inline-flex items-center ml-4">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
-                        <span class="ml-2 text-sm text-gray-700">Railway Pass Concession</span>
-                    </label>
-                </div>
-            
-                <div class="mt-6 flex justify-between">
-                    <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">Search</button>
-                    <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">Easy Booking on AskDISHA</button>
-                </div>
-            
-
-           </div>
-
             </div>
-
-           
-
-
-            <div class="w-[40%] p-8 justify-end z-60  ">
-                <h1 class="font-bold uppercase text-[#213D77] text-4xl mt-20 ml-8">Indian Railways</h1>
-                <h2 class="capitalize text-xl text-[#213D77] mt-1 ml-16">Safety | Security | punctuality</h2>
+            <div class="w-full md:w-[40%] p-8 justify-end z-60"> <h1 class="font-bold uppercase text-[#213D77] text-3xl md:text-4xl mt-8 md:mt-20 ml-0 md:ml-8">Indian Railways</h1>
+                <h2 class="capitalize text-xl text-[#213D77] mt-1 ml-0 md:ml-16">Safety | Security | punctuality</h2>
             </div>
-            </div>
-   </div>
+        </div>
+    </div>
+</main>
 
-    </main>
+
      <div class="page2">
         <hr class="border-2 border-gray mt-3">
         <div class="flex justify-center text-black">

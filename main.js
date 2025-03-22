@@ -33,6 +33,19 @@ function changeLanguage(language) {
     }
 }
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const navLinks2 = document.getElementById('nav-links-2');
+
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('hidden');
+        navLinks2.classList.toggle('hidden');
+    });
+});
+
 function loco() {
     (function () {
         const locomotiveScroll = new LocomotiveScroll();
