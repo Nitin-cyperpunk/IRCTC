@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC Next Generation eticketing System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="https://www.irctc.co.in/nget/assets/images/irctc_logo.png">
+</head>
+
+<body class="onload=" updateDateTime()">
+    <header class="w-full h-auto bg-white fixed top-0 z-50 p-2  text-sm">
+        <nav class="flex  justify-between items-center w-full">
+            <div class="flex justify-start ml-10 mt-2">
+                <img src="https://www.irctc.co.in/nget/assets/images/secondry-logo.png" alt="Secondary Logo"
+                    class="w-24 h-20">
+            </div>
+
+            <div class="flex flex-col">
+
+                <ul class=" flex justify-between items-center w-full uppercase ml-6">
+                    <button class="bg-[#213D77] border px-4 py-2 ml-6">
+                        <h1 class="text-white uppercase">Login</h1>
+                    </button>
+                    <ul class="flex space-x-4">
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#agent-login">Agent Login</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
+                        <li><a href="#help-support">Help & Support</a></li>
+                        <li><a href="#daily-deals " class="font-semibold text-[#FF0000]">Daily Deals</a></li>
+                        <button class="bg-gray-300 border px-4 py-2">
+                            <h1 class="text-black uppercase font-bold">alerts</h1>
+                        </button>
+                        <div id="datetime" class="text-black font-semibold capitalize text-lg"></div>
+                        <li><a href="#" onclick="changeZoom('0.9')" class="font-semibold capitalize  text-sm">A-</a>
+                        </li>
+                        <li><a href="#" onclick="changeZoom('1.0')" class="font-semibold capitalize text-sm">A</a></li>
+                        <li><a href="#" onclick="changeZoom('1.1')" class="font-semibold capitalize text-sm">A+</a></li>
+                        <li><a href="#" onclick="changeLanguage('hindi')" class="font-semibold">हिंदी</a></li>
+                    </ul>
+
+                </ul>
+                <ul class="flex items-center w-full  ml-[7rem] space-x-4">
+                    <li>
+                        <a href="">
+                            <img src="./home.png" alt="Home Icon" class="w-4 h-4">
+                        </a>
+                    </li>
+                    <button class="bg-[#213D77] border px-4 py-2">
+                        <h1 class="text-white uppercase">IRCTC EXCLUSIVE</h1>
+                    </button>
+                    <li>
+                        <a href="#trains"
+                            class="font-semibold uppercase text-[#FF0000] underline underline-offset-4 decoration-2 ">trains</a>
+                    </li>
+                    <li><a href="#loyalty" class="uppercase">loyalty</a></li>
+                    <li>
+                        <a href="#irctc-ewallet" class="underline underline-offset-4 decoration-2 text-[#FFA500] ">
+                            <h1 class="text-black">IRCTC eWallet</h1>
+                        </a>
+                    </li>
+                    <li><a href="#buses" class="uppercase">buses</a></li>
+                    <li><a href="#flights" class="uppercase">flights</a></li>
+                    <li><a href="#hotels" class="uppercase">hotels</a></li>
+                    <li><a href="#holidays" class="uppercase">holidays</a></li>
+                    <li><a href="#meals" class="uppercase">meals</a></li>
+                    <li><a href="#promotions" class="uppercase">promotions</a></li>
+                    <li><a href="#more" class="uppercase">more</a></li>
+                </ul>
+
+            </div>
+            <br>
+
+            <div class="flex justify-end mr-10 ml-4 mt-2">
+                <img src="https://www.irctc.co.in/nget/assets/images/logo.png" alt="Main Logo" class="w-20 h-20">
+            </div>
+        </nav>
+    </header>
+    <main class="">
+        <div class="main min-h-screen w-full bg-cover bg-fixed bg-top-[20%]"
+        style="background-image: url('https://www.irctc.co.in/nget/home_page_banner1.e6749c3d9698d1ac7608.jpg');">
+
+        <div class="flex flex-row">
+            <div class="w-[60%] p-16 justify-start ">
+            <div class="gap-2  mt-20 w-full flex flex-row">
+                <button class="bg-[#213D77] border px-4 py-2 w-[46%]">
+                    <h1 class="text-white uppercase">PNR STATUS</h1>
+                </button>
+                <button class="bg-[#213D77] border px-4 py-2 w-[47%]" >
+                    <h1 class="text-white uppercase">CHART/VACCANY</h1>
+                </button>
+            </div>
+           <div class="form bg-white shadow-2xl rounded-xl w-[95%] h-[90%] p-8">
+            
+                <h1 class="text-3xl font-semibold text-center mb-6 text-[#213D77]">BOOK TICKET</h1>
+            
+                <div class="grid grid-cols-2 gap-1 ">
+                    <div>
+                        <input type="text" id="from" placeholder="From" class="text-lg text-[#213D77] placeholder-[#213D77] mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77] w-full">
+                    </div>
+                    <div>
+                        <label for="date" class="block text-sm font-medium text-[#213D77] ml-4">DD/MM/YYYY *</label>
+                        <input type="date" id="date" value="2025-03-22" class="text-lg text-[#213D77] placeholder-[#213D77] w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
+                    </div>
+                    <div>
+                        
+                        <input type="text" id="to" placeholder="Any Destination" class="text-lg text-[#213D77] placeholder-[#213D77]  mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
+                    </div>
+                    <div>
+                        
+                        <select id="class" class="text-lg  text-[#213D77] placeholder-[#213D77]  mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
+                            <option>All Classes</option>
+                            <option>First Class</option>
+                            <option>Second Class</option>
+                            <option>Sleeper</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="mt-4">
+                    
+                    <select id="general" class="text-lg  text-[#213D77] placeholder-[#213D77]  mt-5 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-[#213D77]">
+                        <option>General</option>
+                        <option>Ladies</option>
+                        <option>Tatkal</option>
+                    </select>
+                </div>
+            
+                <div class="mt-4">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                        <span class="ml-2 text-sm text-gray-700">Person With Disability Concession</span>
+                    </label>
+                    <label class="inline-flex items-center ml-4">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                        <span class="ml-2 text-sm text-gray-700">Flexible With Date</span>
+                    </label>
+                </div>
+            
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                        <span class="ml-2 text-sm text-gray-700">Train with Available Berth</span>
+                    </label>
+                    <label class="inline-flex items-center ml-4">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                        <span class="ml-2 text-sm text-gray-700">Railway Pass Concession</span>
+                    </label>
+                </div>
+            
+                <div class="mt-6 flex justify-between">
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">Search</button>
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">Easy Booking on AskDISHA</button>
+                </div>
+            
+
+           </div>
+
+            </div>
+
+           
+
+
+            <div class="w-[40%] p-8 justify-end z-60  ">
+                <h1 class="font-bold uppercase text-[#213D77] text-5xl mt-20 ml-12">Indian Railways</h1>
+                <h2 class="capitalize text-2xl text-[#213D77] mt-1 ml-24">Safety | Security | punctuality</h2>
+            </div>
+            </div>
+   </div>
+
+    </main>
+     <div class="page2">
+        <hr class="border-2 border-gray mt-3">
+        <div class="flex justify-center text-black">
+            <h1 class="text-3xl font-semibold">Have you not found the right one?<br>Find a service suitable for you here.</h1>
+        </div>
+     </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
